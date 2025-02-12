@@ -51,23 +51,24 @@ const Stats: FC<{ engineer: Engineer }> = ({ engineer }) => {
   return (
     <div className="w-full rounded bg-[#27272B] p-4">
       <div className="text-center text-sm font-medium">Overall score</div>
+      <div className="h-[50vh] w-full">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data} barSize={10}>
+            <XAxis
+              dataKey="name"
+              scale="point"
+              padding={{ left: 50, right: 50 }}
+            />
+            <YAxis domain={[0, 10]} />
 
-      <ResponsiveContainer width="100%" height={500}>
-        <BarChart data={data} barSize={10}>
-          <XAxis
-            dataKey="name"
-            scale="point"
-            padding={{ left: 50, right: 50 }}
-          />
-          <YAxis domain={[0, 10]} />
-
-          <Bar
-            dataKey="score"
-            fill="#EBB305"
-            background={{ fill: "#27272B" }}
-          />
-        </BarChart>
-      </ResponsiveContainer>
+            <Bar
+              dataKey="score"
+              fill="#EBB305"
+              background={{ fill: "#27272B" }}
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   )
 }

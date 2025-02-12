@@ -24,13 +24,16 @@ const EngineerCard: FC<EngineerCardProps> = ({ engineer, children }) => {
   return (
     <div className="w-full rounded bg-[#27272B] p-4">
       <div className="flex items-center gap-4">
-        <Image
-          src={engineer.avatar}
-          width={56}
-          height={56}
-          alt=" "
-          className="rounded-full"
-        />
+        <div className="h-14 w-14">
+          <Image
+            src={engineer.avatar}
+            width={56}
+            height={56}
+            alt=" "
+            className="rounded-full"
+          />
+        </div>
+
         <div className="flex w-full justify-between">
           <div className="w-full">
             <div className="text-lg font-medium text-white">

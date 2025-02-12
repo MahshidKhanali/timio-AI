@@ -32,7 +32,7 @@ export default async function Page({
     <>
       <BackButton />
 
-      <div className="relative mt-4 flex w-full items-start gap-4">
+      <div className="relative mt-4 flex w-full flex-col items-start gap-4 md:flex-row">
         <div className="flex w-full flex-col gap-4">
           <EngineerCard engineer={engineer} />
 

@@ -21,7 +21,7 @@ const TaskCard: FC<{ task: Task }> = ({ task }) => {
 
         <div
           className={twMerge(
-            "rounded-full px-3 py-1 text-center text-sm",
+            "flex-shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-center text-sm",
             statusStyle,
           )}
         >

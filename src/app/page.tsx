@@ -2,13 +2,15 @@
 
 import React from "react"
 
-import Lottie from "lottie-react"
 import AiAnimation from "../assets/ai.json"
 import Link from "next/link"
 
+import dynamic from "next/dynamic"
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false })
+
 const HomePage = () => {
   return (
-    <main className="relative flex h-screen w-screen items-center overflow-hidden bg-[#1E1F22]">
+    <main className="relative flex h-dvh w-screen items-center bg-[#1E1F22]">
       <div className="flex w-full flex-col items-center gap-8">
         <div className="-mb-16 h-96 w-96">
           <Lottie animationData={AiAnimation} loop />
